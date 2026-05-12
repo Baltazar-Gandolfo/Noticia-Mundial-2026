@@ -17,3 +17,5 @@ Flexbox: se usa para el layout principal (main + sidebar), la grilla de noticias
 
 Menú responsive: en celular aparece solo el ícono ☰. En desktop aparece la barra horizontal con todos los links.
 Normalize.css: archivo separado para que el sitio se vea igual en Chrome, Firefox y Safari.
+
+Se puede visualizar en Git-Hub Pages: https://baltazar-gandolfo.github.io/Noticia-Mundial-2026/
