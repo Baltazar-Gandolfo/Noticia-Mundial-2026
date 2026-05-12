@@ -1,0 +1,227 @@
+
+.header-brand {
+    text-align: center;
+    padding: 15px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    min-height: 45px;
+}
+
+/* En celular: el menú está oculto, se muestra la hamburguesa */
+.hamburger {
+    display: block;
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-links {
+    display: none; /* oculto en celular */
+}
+
+
+/* LAYOUT PRINCIPAL
+   En celular: todo en una sola columna */
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* En celular, main y sidebar van uno abajo del otro */
+.fila-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.columna-principal {
+    width: 100%;
+}
+
+.sidebar {
+    width: 100%;
+}
+
+
+.noticia-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.noticia-principal img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.grilla-destacadas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-noticia {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-noticia img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.noticia-mediana {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.noticia-mediana img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+
+.noticias-secundarias li {
+    padding: 8px 0;
+}
+
+.tabla-posiciones {
+    width: 100%;
+}
+
+.tabla-posiciones th,
+.tabla-posiciones td {
+    padding: 7px 10px;
+    text-align: left;
+}
+
+.tabla-posiciones td:nth-child(2),
+.tabla-posiciones td:nth-child(3),
+.tabla-posiciones th:nth-child(2),
+.tabla-posiciones th:nth-child(3) {
+    text-align: center;
+}
+
+.lista-goleadores li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+
+.publicidad {
+    margin-bottom: 20px;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    padding: 15px;
+}
+
+
+
+@media (min-width: 768px) {
+
+    /* La noticia principal: imagen a la izquierda, texto a la derecha */
+    .noticia-principal {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .noticia-principal img {
+        width: 55%;
+        height: 280px;
+        flex-shrink: 0;
+    }
+
+    /* Las 3 tarjetas se ponen en fila de a 2 */
+    .grilla-destacadas {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-noticia {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    /* Noticias medianas: imagen chica al lado del texto */
+    .noticia-mediana {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .noticia-mediana img {
+        width: 140px;
+        height: 90px;
+        flex-shrink: 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    /* En desktop: hamburguesa oculta, menú visible */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex; /* visible en desktop */
+        gap: 0;
+    }
+
+    /* Main y sidebar en fila */
+    .fila-contenido {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .columna-principal {
+        flex: 1;
+    }
+
+    .sidebar {
+        width: 280px;
+        flex-shrink: 0;
+    }
+
+    /* Las 3 tarjetas en una fila de 3 */
+    .grilla-destacadas {
+        flex-wrap: nowrap;
+    }
+
+    .tarjeta-noticia {
+        flex: 1;
+    }
+
+}
